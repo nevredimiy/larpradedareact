@@ -1,3 +1,5 @@
+@import-normalize;
+
 :root {
   --font-family: "Muller", sans-serif;
   --content-width: 1536px;

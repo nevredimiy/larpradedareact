@@ -1,0 +1,24 @@
+//Orbit
+  export const bgColors = [
+    'aquamarine',
+    'bisque',
+    'burlywood',
+    'cornflowerblue',
+    'darkkhaki',
+    'darksalmon',
+    'lightcoral',
+    'aquamarine',
+    'bisque',
+    'burlywood',
+    'cornflowerblue',
+    'darkkhaki',
+    'darksalmon',
+    'lightcoral',
+    'aquamarine',
+    'bisque',
+    'burlywood',
+    'cornflowerblue',
+    'darkkhaki',
+    'darksalmon',
+    'lightcoral'
+  ];

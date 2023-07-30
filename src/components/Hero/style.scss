@@ -1,0 +1,215 @@
+@import '../../scss/mixins.scss';
+.m15846145a0{
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: .30214;
+    stroke: #000000
+}
+
+.m20952 {
+    stroke-width: .040202;
+ }
+
+.m2067915529c064687 {
+    color: #000000;
+    fill: #000000;
+ }
+
+ .clipruleevenodd {
+    clip-rule: evenodd;
+    fill-rule: evenodd;
+    image-rendering: optimizeQuality;
+    shape-rendering: geometricPrecision
+}
+
+.fil0 {
+    fill: #000000;
+}
+
+.hero {
+    padding-bottom: 2rem;
+
+    &__container {
+        @include sm {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    &__post {
+        text-align: center;
+    }
+
+    &__title {
+        padding: 1.5rem 0;
+        transition: transform 1s ease-in-out 0.2s, opacity 1s ease-in-out 0.5s;
+    }
+
+    &__description {
+        transition: transform 1s ease-in-out 0.2s, opacity 1s ease-in-out 1s;
+    }
+
+    &__orbit {}
+
+    &__btn {
+        transition: transform 1s ease-in-out 1.5s, opacity 1s ease-in-out 1.5s;
+    }
+
+}
+
+.orbit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+    margin-top: 40px;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out, opacity 1s ease-in-out;
+
+    @include ssm {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    @include sm {
+        width: 24rem;
+        height: 24rem;
+    }
+
+    @include md {
+        margin-top: auto;
+    }
+
+
+    &__planet {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: lightgray;
+        border-radius: 100%;
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        transition: width 0.3s, height 0.3s;
+
+        &:focus {
+            outline: 2px solid var(--dark-brown);
+        }
+
+        @include hover {
+            width: 5rem;
+            height: 5rem;
+
+            .orbit__planet-img {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
+        &:active {
+            outline: none;
+        }
+    }
+
+    &__planet-img {
+        width: 2rem;
+        height: 2rem;
+        transition: width 0.3s;
+
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 14rem;
+        height: 14rem;
+
+        @include md {
+            width: 18rem;
+            height: 18rem;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        left: 0;
+        transform-origin: 6rem;
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        @include ssm {
+            transform-origin: 7rem;
+        }
+
+        @include md {
+            transform-origin: 9rem;
+        }
+
+    }
+
+    &__link {
+        font-size: 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        text-align: center;
+        width: 3rem;
+        height: 3rem;
+        transition: width 0.3s, height 0.3s, transform 0.3s;
+
+        @include hover {
+            width: 3.25rem;
+            height: 3.25rem;
+
+            .orbit__link-icon {
+                opacity: 0;
+            }
+
+            .orbit__link-text {
+                opacity: 100;
+            }
+        }
+    }
+
+    &__link-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: opacity 0.3s;
+
+        @include ssm {
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+    }
+
+    &__link-text {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+}
+
+.element-animation {
+    opacity: 0;
+    transform: translateY(-30%);
+}
+
+.element-show {
+    opacity: 100;
+    transform: translateY(0);
+}
+

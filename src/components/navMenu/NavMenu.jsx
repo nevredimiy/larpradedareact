@@ -26,8 +26,9 @@ const NavMenu = ({ menuClass }) => {
          searchOpenDropMenu.forEach(item => {
             if (item !== current && !parents.includes(item)) {
                item.classList.remove('show');
-               item.previousElementSibling.classList.remove('rotate-180');
-               item.parentElement.classList.remove('bg-l-brown')
+               // item.previousElementSibling.classList.remove('rotate-180');
+               item.parentElement.classList.remove('menu__item--active');
+               
             }
          })
       }
@@ -39,12 +40,12 @@ const NavMenu = ({ menuClass }) => {
             
       
       if (itemHasChildren) {
-         itemHasChildren.classList.toggle('bg-l-brown');
+         itemHasChildren.classList.toggle('menu__item--active');
          Array.from(itemHasChildren.children).forEach(elem => {
-            console.dir(elem)
-            if (elem.nodeName === 'svg') {
-               elem.classList.toggle('rotate-180');
-            }
+            // console.dir(elem)
+            // if (elem.nodeName === 'svg') {
+            //    elem.classList.toggle('rotate-180');
+            // }
             if (elem.nodeName === 'UL') {
                closeAllDropMenu(elem);
                elem.classList.toggle('show');               

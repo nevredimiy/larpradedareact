@@ -1,9 +1,17 @@
+import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
+import { Hero } from "../../components/Hero/Hero";
+import RecentProduct from "../../components/RecentProduct/RecentProduct";
 
 
 const Home = () => {
-    return(
+  return (
+    <>
       <Header />
+      <Hero />
+      <RecentProduct />
+      <Footer />
+    </>
     );
 }
 
